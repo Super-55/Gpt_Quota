@@ -1,0 +1,21 @@
+/* Scroll inside the glass window so the system scrollbar never sits outside its frame. */
+html,body,#root{height:100%;overflow:hidden}
+.app{height:100dvh;min-height:0;box-sizing:border-box;overflow:auto;scrollbar-gutter:stable;overscroll-behavior:contain}
+.app,.modal{scrollbar-width:auto;scrollbar-color:auto}
+.app::-webkit-scrollbar,.modal::-webkit-scrollbar{width:8px;height:8px}
+.app::-webkit-scrollbar-track,.modal::-webkit-scrollbar-track{background:transparent;margin-block:18px}
+.app::-webkit-scrollbar-thumb,.modal::-webkit-scrollbar-thumb{background:rgba(228,180,206,.23);border:2px solid transparent;background-clip:padding-box;border-radius:20px}
+.app::-webkit-scrollbar-thumb:hover,.modal::-webkit-scrollbar-thumb:hover{background-color:rgba(244,206,228,.4)}
+.app::-webkit-scrollbar-corner,.modal::-webkit-scrollbar-corner{background:transparent}
+.app-footer{padding-bottom:9px}
+.compact{padding-bottom:18px}
+.compact-source{padding-bottom:7px}
+.app-header,.compact-header{position:sticky;top:0;z-index:4;padding-block:8px;margin-top:-8px;border-radius:10px;background:rgba(31,17,29,.5);backdrop-filter:blur(16px)}
+.theme-graphite .app-header,.theme-graphite .compact-header{background:rgba(24,26,35,.5)}
+/* Recessed tracks and a restrained satin fill match the translucent card material. */
+.meter,.token-strip{height:5px;background:rgba(226,179,204,.075);box-shadow:inset 0 1px 2px rgba(12,7,14,.16),inset 0 0 0 1px rgba(245,209,229,.035);border-radius:999px}
+.meter .meter-fill,.token-strip>span{background:linear-gradient(90deg,rgba(211,139,177,.78),rgba(240,186,213,.94));box-shadow:inset 0 1px 0 rgba(255,236,247,.14);border-radius:inherit}
+.metric>.meter{height:6px}
+.rank-row .meter{height:4px}
+.token-strip{height:5px}
+.theme-graphite .meter,.theme-graphite .token-strip{background:rgba(208,196,220,.075)}

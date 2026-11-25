@@ -1,0 +1,18 @@
+:root{--window-radius:8px}
+/* The native host, document and web root must all preserve alpha. */
+html.desktop-glass,html.desktop-glass body,html.desktop-glass #root{background:transparent}
+.app{--card:rgba(74,39,61,.12);border:1px solid rgba(255,231,245,.22);border-radius:var(--window-radius,8px);overflow:hidden;background:radial-gradient(ellipse at 0% 0%,rgba(173,54,104,.08),transparent 55%),rgba(31,17,29,var(--surface-opacity,.46));}
+.theme-graphite{--card:rgba(58,62,82,.12);background:radial-gradient(ellipse at 0% 0%,rgba(130,131,166,.05),transparent 60%),rgba(24,26,35,var(--surface-opacity,.46))}
+.summary-grid,.workspace{background:rgba(255,255,255,.018);border-color:rgba(255,231,245,.19)}
+.panel,.metric{background:var(--card);border-color:rgba(255,231,245,.22)}
+.app-header,.compact-header{-webkit-app-region:drag;app-region:drag;user-select:none}
+button,input,select,a,.header-actions,.window-controls{-webkit-app-region:no-drag;app-region:no-drag}
+.window-controls{display:flex;align-items:center;gap:2px;margin-left:8px;padding-left:8px;border-left:1px solid var(--border)}
+.window-controls button{height:29px;width:29px;border:0;padding:5px;background:transparent;border-radius:7px}
+.window-controls button:hover{background:rgba(255,255,255,.15)}
+.window-controls button:last-child:hover{background:rgba(218,75,108,.65)}
+.compact-header{gap:8px}.compact-header>.source-badge{margin-left:auto}.compact .window-controls{gap:0;margin-left:1px;padding-left:3px}.compact .window-controls button{width:24px;height:26px}
+.compact .brand{font-size:13px}.compact .source-badge{font-size:9px;padding:4px 6px}
+.quota-refresh-note{margin-top:8px;font-size:10px;color:var(--muted);line-height:1.7}
+.loading{background:rgba(31,17,29,.46);border-radius:var(--window-radius,8px)}
+

@@ -1,0 +1,10 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import './styles.css';
+import './glass.css';
+import './motion.css';
+import './refinements.css';
+import './window-frame.css';
+document.documentElement.classList.toggle('desktop-glass',Boolean(window.quota));
+createRoot(document.getElementById('root')!).render(<React.StrictMode><App /></React.StrictMode>);
